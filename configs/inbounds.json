@@ -1,0 +1,76 @@
+{
+  "inbounds":[
+    {
+      "tag":"socks-just-bans",
+      "listen":"0.0.0.0",
+      "port":9900,
+      "protocol":"socks",
+      "settings":{
+        "auth":"password",
+        "accounts": [
+          {
+            "user": "mrm",
+            "pass": "123654789"
+          }
+        ],
+        "udp":true,
+        "userLevel":8
+      },
+      "sniffing":{
+        "destOverride":[
+          "http",
+          "tls"
+        ],
+        "enabled":true
+      }
+    },
+    {
+      "tag":"socks-all",
+      "listen":"0.0.0.0",
+      "port":9901,
+      "protocol":"socks",
+      "settings":{
+        "auth":"password",
+        "accounts": [
+          {
+            "user": "mrm",
+            "pass": "123654789"
+          }
+        ],
+        "udp":true,
+        "userLevel":8
+      },
+      "sniffing":{
+        "destOverride":[
+          "http",
+          "tls"
+        ],
+        "enabled":true
+      }
+    },
+    {
+      "tag":"socks-not-ir",
+      "listen":"0.0.0.0",
+      "port":9902,
+      "protocol":"socks",
+      "settings":{
+        "auth":"password",
+        "accounts": [
+          {
+            "user": "mrm",
+            "pass": "123654789"
+          }
+        ],
+        "udp":true,
+        "userLevel":8
+      },
+      "sniffing":{
+        "destOverride":[
+          "http",
+          "tls"
+        ],
+        "enabled":true
+      }
+    }
+  ]
+}

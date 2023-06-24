@@ -1,0 +1,94 @@
+{
+   "outbounds":[
+      {
+         "tag": "public-1",
+         "protocol": "vless",
+         "settings": {
+            "vnext": [
+               {
+                  "address": "join-init1984-3.linuxmember.online",
+                  "port": 14159,
+                  "users": [
+                     {
+                        "id": "ab46c846-90c9-46c9-dfee-817bbc778041",
+                        "alterId": 0,
+                        "email": "t@t.tt",
+                        "security": "auto",
+                        "encryption": "none",
+                        "flow": ""
+                     }
+                  ]
+               }
+            ]
+         },
+         "streamSettings": {
+            "network": "tcp",
+            "security": "reality",
+            "realitySettings": {
+               "serverName": "zula.ir",
+               "fingerprint": "firefox",
+               "show": false,
+               "publicKey": "9643hdJdq9W7_HVVMAgDHlWFWnVmbjaeu5Pz3deIdX0",
+               "shortId": "",
+               "spiderX": ""
+            }
+         },
+         "mux": {
+            "enabled": false,
+            "concurrency": -1
+         }
+      },
+      {
+         "tag":"public-2",
+         "protocol": "vless",
+         "settings": {
+            "vnext": [
+               {
+                  "address": "176.97.64.53",
+                  "port": 54213,
+                  "users": [
+                     {
+                        "id": "d9b89229-ee61-467c-aa74-e33ab6050c4a",
+                        "alterId": 0,
+                        "email": "t@t.tt",
+                        "security": "auto",
+                        "encryption": "none",
+                        "flow": "xtls-rprx-vision"
+                     }
+                  ]
+               }
+            ]
+         },
+         "streamSettings": {
+            "network": "tcp",
+            "security": "reality",
+            "realitySettings": {
+               "serverName": "gstatic.com",
+               "fingerprint": "chrome",
+               "show": false,
+               "publicKey": "JfYkQ2Y9dDtoe39UAKEtWdQOYZVcqy7bu_SCVyAZb3A",
+               "shortId": "96e179902d6acaab",
+               "spiderX": ""
+            }
+         },
+         "mux": {
+            "enabled": false,
+            "concurrency": -1
+         }
+      },
+      {
+         "tag": "direct-out",
+         "protocol": "freedom",
+         "settings": {}
+      },
+      {
+         "tag": "block-out",
+         "protocol": "blackhole",
+         "settings": {
+            "response": {
+               "type": "http"
+            }
+         }
+      }
+   ]
+}

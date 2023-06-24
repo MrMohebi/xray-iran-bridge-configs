@@ -1,0 +1,66 @@
+{
+  "routing":{
+    "domainStrategy":"IPIfNonMatch",
+    "domainMatcher": "hybrid",
+    "balancers": [
+      {
+        "tag": "public-proxies",
+        "selector": [
+          "public-1",
+          "public-2"
+        ]
+      }
+    ],
+    "rules":[
+      {
+        "inboundTag": ["socks-all"],
+        "domain": [],
+        "balancerTag":"public-proxies",
+        "type":"field"
+      },
+      {
+        "inboundTag": ["socks-not-ir", "socks-just-bans"],
+        "outboundTag": "direct-out",
+        "domain": [
+          "regexp:.*\\.ir$",
+          "ext:iran.dat:ir",
+          "ext:iran.dat:other",
+          "snapp", "digikala","tapsi", "blogfa", "bank", "sb24.com", "sheypoor.com", "tebyan.net", "beytoote.com", "telewebion.com", "Film2movie.ws", "Setare.com", "Filimo.com", "Torob.com", "Tgju.org", "Sarzamindownload.com", "downloadha.com", "P30download.com", "Sanjesh.org"
+        ],
+        "type": "field"
+      },
+      {
+        "inboundTag": ["socks-just-bans"],
+        "domain": [
+          "ext:iran-bans.dat:censored",
+          "ext:iran-bans.dat:sanctioned"
+        ],
+        "balancerTag":"public-proxies",
+        "type":"field"
+      },
+      {
+        "inboundTag": ["socks-just-bans"],
+        "ip": [
+          "149.154.160.0/21",
+          "149.154.168.0/22",
+          "149.154.172.0/22",
+          "185.76.151.0/24"
+        ],
+        "balancerTag":"public-proxies",
+        "type":"field"
+      },
+      {
+        "inboundTag": ["socks-just-bans"],
+        "domain": [],
+        "outboundTag": "direct-out",
+        "type":"field"
+      },
+      {
+        "inboundTag": ["socks-not-ir"],
+        "domain": [],
+        "balancerTag":"public-proxies",
+        "type":"field"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+# ports: HOST:CONTAINER
+version: '3.8'
+services:
+  go:
+    build: .
+    container_name: v2ray-core
+    restart: unless-stopped
+    ports:
+      - "9900:9900"
+      - "9901:9901"
+      - "9902:9902"
