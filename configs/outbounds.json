@@ -1,43 +1,49 @@
 {
    "outbounds":[
       {
-         "tag": "public-1",
-         "protocol": "vless",
-         "settings": {
-            "vnext": [
-               {
-                  "address": "join-init1984-3.linuxmember.online",
-                  "port": 14159,
-                  "users": [
-                     {
-                        "id": "ab46c846-90c9-46c9-dfee-817bbc778041",
-                        "alterId": 0,
-                        "email": "t@t.tt",
-                        "security": "auto",
-                        "encryption": "none",
-                        "flow": ""
-                     }
-                  ]
-               }
+      "tag":"public-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "cljoon.wtf-broo.ir",
+            "port": 2087,
+            "users": [
+              {
+                "id": "86dee03e-8119-4215-e719-279602c5a366",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": ""
+              }
             ]
-         },
-         "streamSettings": {
-            "network": "tcp",
-            "security": "reality",
-            "realitySettings": {
-               "serverName": "zula.ir",
-               "fingerprint": "firefox",
-               "show": false,
-               "publicKey": "9643hdJdq9W7_HVVMAgDHlWFWnVmbjaeu5Pz3deIdX0",
-               "shortId": "",
-               "spiderX": ""
-            }
-         },
-         "mux": {
-            "enabled": false,
-            "concurrency": -1
-         }
+          }
+        ]
       },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "cljoon.wtf-broo.ir",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "chrome",
+          "show": false
+        },
+        "wsSettings": {
+          "path": "/",
+          "headers": {}
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
       {
          "tag":"public-2",
          "protocol": "vless",
