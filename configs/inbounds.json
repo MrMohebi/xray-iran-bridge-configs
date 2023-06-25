@@ -50,26 +50,26 @@
     },
     {
       "tag":"socks-not-ir",
-      "listen":"0.0.0.0",
-      "port":9902,
-      "protocol":"socks",
-      "settings":{
-        "auth":"password",
-        "accounts": [
-          {
-            "user": "mrm",
-            "pass": "123654789"
-          }
-        ],
-        "udp":true,
-        "userLevel":8
-      },
-      "sniffing":{
-        "destOverride":[
-          "http",
-          "tls"
-        ],
-        "enabled":true
+      "listen": "0.0.0.0",
+      "port": 9902,
+      "protocol": "vless",
+      "settings": {
+	    	"clients": [
+		      {
+		      	"id": "5783a3e7-e373-51cd-8642-c83782b807c5",
+			      "level": 0,
+			      "email": "love@xray.com",
+		      	"flow": "xtls-rprx-vision"
+			    }
+		    ],
+		        "decryption": "none"
+	    },
+      "sniffing": {
+        "destOverride": [
+			"http",
+			"tls"
+			],
+        "enabled": true,
       }
     }
   ]
