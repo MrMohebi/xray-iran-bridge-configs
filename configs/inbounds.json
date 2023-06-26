@@ -57,7 +57,7 @@
 	"clients": [
 	 {
        	   "id": "fbca603a-b5b3-4c41-821a-bf06ab8bb6da",
-	   "level": 8,
+	   "level": 0,
 	   "email": "love@xray.com",
 	   "flow": "xtls-rprx-vision"
 	 }
