@@ -229,86 +229,80 @@
       }
     },
       {
-      "tag":"public-1",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cljoon.wtf-broo.ir",
-            "port": 2087,
-            "users": [
-              {
-                "id": "86dee03e-8119-4215-e719-279602c5a366",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
-                "encryption": "none",
-                "flow": ""
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "cljoon.wtf-broo.ir",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "show": false
+        "tag":"public-1",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "join-init1984.linuxmember.online",
+              "port": 443,
+              "users": [
+                {
+                  "id": "39c82bef-3a11-4d16-a447-c473c8c6e649",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
         },
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.speedtest.net",
+            "fingerprint": "safari",
+            "show": false,
+            "publicKey": "2OA4qYcQma2xWiYIhoKKKw8NbT3_P8uhLRhmhg5wnj8",
+            "shortId": "5ddf",
+            "spiderX": ""
+          }
+        },
+        "mux": {
+          "enabled": false,
+          "concurrency": -1
         }
       },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
       {
-         "tag":"public-2",
-         "protocol": "vless",
-         "settings": {
-            "vnext": [
-               {
-                  "address": "176.97.64.53",
-                  "port": 54213,
-                  "users": [
-                     {
-                        "id": "d9b89229-ee61-467c-aa74-e33ab6050c4a",
-                        "alterId": 0,
-                        "email": "t@t.tt",
-                        "security": "auto",
-                        "encryption": "none",
-                        "flow": "xtls-rprx-vision"
-                     }
-                  ]
-               }
-            ]
-         },
-         "streamSettings": {
-            "network": "tcp",
-            "security": "reality",
-            "realitySettings": {
-               "serverName": "gstatic.com",
-               "fingerprint": "chrome",
-               "show": false,
-               "publicKey": "JfYkQ2Y9dDtoe39UAKEtWdQOYZVcqy7bu_SCVyAZb3A",
-               "shortId": "96e179902d6acaab",
-               "spiderX": ""
+        "tag":"public-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "join-init1984-4.linuxmember.online",
+              "port": 443,
+              "users": [
+                {
+                  "id": "9af23aa1-c612-486d-e83d-0efbb0e2acf4",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
             }
-         },
-         "mux": {
-            "enabled": false,
-            "concurrency": -1
-         }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.speedtest.net",
+            "fingerprint": "safari",
+            "show": false,
+            "publicKey": "yJqUGFsywYKwVMKSb4KrGqm4eXKBYq0v_urwMKr0czI",
+            "shortId": "20b83aef",
+            "spiderX": ""
+          }
+        },
+        "mux": {
+          "enabled": false,
+          "concurrency": -1
+        }
       },
       {
          "tag": "direct-out",
