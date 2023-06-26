@@ -56,7 +56,7 @@
       "settings": {
 	"clients": [
 	 {
-       	   "id": "fbca603a-b5b3-4c41-821a-bf06ab8bb6da",
+       	   "id": "5783a3e7-e373-51cd-8642-c83782b807c5",
 	   "level": 0,
 	   "email": "love@xray.com",
 	   "flow": "xtls-rprx-vision"
@@ -64,22 +64,12 @@
         ],
       "decryption": "none"
       },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "none",
-        "tcpSettings": {
-	  "acceptProxyProtocol": false,
-	  "header": {
-	  "type": "none"
-	  }
-	}
-      },
-      "sniffing":{
-        "destOverride":[
-          "http",
-          "tls"
-        ],
-        "enabled":true
+      "sniffing": {
+        "destOverride": [
+			"http",
+			"tls"
+			],
+        "enabled": true
       }
     }
   ]
