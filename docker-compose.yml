@@ -10,3 +10,18 @@ services:
       - "9901:9901"
       - "9902:9902"
       - "9802:9802"
+  openvpn:
+    cap_add:
+      - NET_ADMIN
+    image: kylemanna/openvpn
+    container_name: openvpn
+    ports:
+      - ${OV_PORT}:1194/udp
+    restart: unless-stopped
+    volumes:
+      - OV_VOLUME:/etc/openvpn
+
+volumes:
+  OV_VOLUME:
+    external:
+      name: ${OV_VOLUME}
