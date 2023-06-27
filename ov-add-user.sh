@@ -23,7 +23,8 @@ git clone https://mrm:$TOKEN_GITHUB@github.com/$REPO repo  && \
 cd repo && \
 git config --local user.name auto-commit && \
 git config --local user.email "auto-commit@users.noreply.github.com" && \
-git checkout -b clients && \
+git fetch && \
+git checkout clients && \
 cp /root/repo/$CLIENT_NAME.ovpn ./ && \
 git add $CLIENT_NAME.ovpn && \
 git commit -m 'add new client => $CLIENT_NAME with password => $CLIENT_PASS' && \
