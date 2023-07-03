@@ -231,78 +231,78 @@
       {
         "tag":"public-1",
         "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "join-init1984.linuxmember.online",
-              "port": 443,
-              "users": [
-                {
-                  "id": "39c82bef-3a11-4d16-a447-c473c8c6e649",
-                  "alterId": 0,
-                  "email": "t@t.tt",
-                  "security": "auto",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "www.speedtest.net",
-            "fingerprint": "safari",
-            "show": false,
-            "publicKey": "2OA4qYcQma2xWiYIhoKKKw8NbT3_P8uhLRhmhg5wnj8",
-            "shortId": "5ddf",
-            "spiderX": ""
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.180.20.221",
+            "port": 15172,
+            "users": [
+              {
+                "id": "fa994681-f88a-4c80-a0ab-fa2bafdb14d5",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
           }
-        },
-        "mux": {
-          "enabled": false,
-          "concurrency": -1
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "zula.ir",
+          "fingerprint": "firefox",
+          "show": false,
+          "publicKey": "VOWsK959_D6s_Gxwi8kC6AOL8VqMOFWzZGAxMAFau10",
+          "shortId": "fb5604",
+          "spiderX": ""
         }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
       },
       {
         "tag":"public-2",
         "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "join-init1984-4.linuxmember.online",
-              "port": 443,
-              "users": [
-                {
-                  "id": "9af23aa1-c612-486d-e83d-0efbb0e2acf4",
-                  "alterId": 0,
-                  "email": "t@t.tt",
-                  "security": "auto",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "www.speedtest.net",
-            "fingerprint": "safari",
-            "show": false,
-            "publicKey": "yJqUGFsywYKwVMKSb4KrGqm4eXKBYq0v_urwMKr0czI",
-            "shortId": "20b83aef",
-            "spiderX": ""
+      "settings": {
+        "vnext": [
+          {
+            "address": "38.180.20.221",
+            "port": 41971,
+            "users": [
+              {
+                "id": "b09664a6-85ab-4ad4-99e9-b3d933dc36d7",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
           }
-        },
-        "mux": {
-          "enabled": false,
-          "concurrency": -1
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ftp.debian.org",
+          "fingerprint": "chrome",
+          "show": false,
+          "publicKey": "m_DSo7z7Vf51CNcqxmEXtZjZXcvMGvI17QgQjsYxlV4",
+          "shortId": "aa106690",
+          "spiderX": ""
         }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
       },
       {
          "tag": "direct-out",
