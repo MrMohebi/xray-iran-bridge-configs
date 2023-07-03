@@ -30,7 +30,13 @@
       "port":9901,
       "protocol":"socks",
       "settings":{
-        "auth": "noauth",
+        "auth":"password",
+        "accounts": [
+          {
+            "user": "mrm",
+            "pass": "123654789"
+          }
+        ],
         "udp":true,
         "userLevel":8
       },
