@@ -228,22 +228,21 @@
         "concurrency": -1
       }
     },
-      {
-        "tag":"public-1",
-        "protocol": "vless",
+    {
+      "tag": "public-1",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
             "address": "38.180.20.221",
-            "port": 15172,
+            "port": 443,
             "users": [
               {
-                "id": "fa994681-f88a-4c80-a0ab-fa2bafdb14d5",
+                "id": "9824b5a8-1bbf-4b05-b54f-7e82535eae7d",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "encryption": "none"
               }
             ]
           }
@@ -253,11 +252,11 @@
         "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "zula.ir",
-          "fingerprint": "firefox",
+          "serverName": "www.speedtest.net",
+          "fingerprint": "safari",
           "show": false,
-          "publicKey": "VOWsK959_D6s_Gxwi8kC6AOL8VqMOFWzZGAxMAFau10",
-          "shortId": "fb5604",
+          "publicKey": "c023GMsdvOYfRpHkWv6QFHbTG-ymhjfHbvjchr1xqDc",
+          "shortId": "335a",
           "spiderX": ""
         }
       },
@@ -265,45 +264,50 @@
         "enabled": false,
         "concurrency": -1
       }
-      },
-      {
-        "tag":"public-2",
-        "protocol": "vless",
+    },
+    {
+      "tag": "public-2",
+      "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "38.180.20.221",
-            "port": 41971,
+            "address": "init1984-mtn.linuxmember.online",
+            "port": 2087,
             "users": [
               {
-                "id": "b09664a6-85ab-4ad4-99e9-b3d933dc36d7",
+                "id": "4bdc331c-ff32-42ba-bd02-d279fb4851f1",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ftp.debian.org",
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "inittes.parsiran.top",
           "fingerprint": "chrome",
-          "show": false,
-          "publicKey": "m_DSo7z7Vf51CNcqxmEXtZjZXcvMGvI17QgQjsYxlV4",
-          "shortId": "aa106690",
-          "spiderX": ""
+          "show": false
+        },
+        "grpcSettings": {
+          "serviceName": "@INIT1984",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
         }
       },
       "mux": {
         "enabled": false,
         "concurrency": -1
       }
-      },
+    },
       {
          "tag": "direct-out",
          "protocol": "freedom",
