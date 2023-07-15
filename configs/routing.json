@@ -46,7 +46,7 @@
           "ext:iran-bans.dat:censored",
           "ext:iran-bans.dat:sanctioned"
         ],
-        "balancerTag":"public-proxies",
+        "balancerTag":"private-mrar-proxies",
         "type":"field"
       },
       {
@@ -57,7 +57,7 @@
           "149.154.172.0/22",
           "185.76.151.0/24"
         ],
-        "balancerTag":"public-proxies",
+        "balancerTag":"private-mrar-proxies",
         "type":"field"
       },
       {
