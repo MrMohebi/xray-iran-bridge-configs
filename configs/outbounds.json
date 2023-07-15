@@ -6,31 +6,38 @@
       "settings": {
         "vnext": [
           {
-            "address": "joon.wtf-broo.ir",
-            "port": 15683,
+            "address": "levi.wtf-broo.ir",
+            "port": 10046,
             "users": [
               {
-                "id": "86a01466-fb62-4af0-ae61-f999cfe4223a",
+                "id": "65482839-0046-443c-9cb9-6517675d4486",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
         "realitySettings": {
           "serverName": "gstatic.com",
           "fingerprint": "chrome",
           "show": false,
-          "publicKey": "W_mwSXWWF9RYZAJq9pNm5nwPJuKolHi5rP-JpYLu50A",
-          "shortId": "2911b0d2",
+          "publicKey": "ygpqi3lswjN_lrKRFxyExI-28glqawyps_yXjQ23MGg",
+          "shortId": "464d",
           "spiderX": "/"
+        },
+        "grpcSettings": {
+          "serviceName": "",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
         }
       },
       "mux": {
@@ -38,37 +45,44 @@
         "concurrency": -1
       }
     },
-	{
+    {
       "tag": "private-2-mrar",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "joon.wtf-broo.ir",
-            "port": 47343,
+            "address": "levi.wtf-broo.ir",
+            "port": 57356,
             "users": [
               {
-                "id": "c0cfb856-1d8f-47d2-b51b-c436848a9ee5",
+                "id": "a9362cca-c779-4854-a3ab-45b5ff2cc03e",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
+        "network": "grpc",
         "security": "reality",
         "realitySettings": {
           "serverName": "telewebion.com",
           "fingerprint": "chrome",
           "show": false,
-          "publicKey": "3padoqDLK6JYbNAdHABzEVzn3qyZtwVbAzcvjSY5PiY",
-          "shortId": "e8ddf39c",
+          "publicKey": "sq7N8HmEL1cPskTNP4h5M31BqAoeIQ76bBcCDh9fKQc",
+          "shortId": "",
           "spiderX": "/"
+        },
+        "grpcSettings": {
+          "serviceName": "",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
         }
       },
       "mux": {
