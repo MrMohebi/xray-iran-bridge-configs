@@ -7,10 +7,10 @@
         "vnext": [
           {
             "address": "levi.wtf-broo.ir",
-            "port": 10046,
+            "port": 21563,
             "users": [
               {
-                "id": "65482839-0046-443c-9cb9-6517675d4486",
+                "id": "da079959-0191-470d-8e6f-67d16fef2883",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -21,23 +21,15 @@
         ]
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "tcp",
         "security": "reality",
         "realitySettings": {
-          "serverName": "gstatic.com",
+          "serverName": "discordapp.com",
           "fingerprint": "chrome",
           "show": false,
-          "publicKey": "ygpqi3lswjN_lrKRFxyExI-28glqawyps_yXjQ23MGg",
-          "shortId": "464d",
-          "spiderX": "/"
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "multiMode": false,
-          "idle_timeout": 60,
-          "health_check_timeout": 20,
-          "permit_without_stream": false,
-          "initial_windows_size": 0
+          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "shortId": "",
+          "spiderX": ""
         }
       },
       "mux": {
@@ -52,10 +44,10 @@
         "vnext": [
           {
             "address": "levi.wtf-broo.ir",
-            "port": 57356,
+            "port": 21564,
             "users": [
               {
-                "id": "a9362cca-c779-4854-a3ab-45b5ff2cc03e",
+                "id": "da079959-0191-470d-8e6f-67d16fef2883",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -69,167 +61,15 @@
         "network": "grpc",
         "security": "reality",
         "realitySettings": {
-          "serverName": "telewebion.com",
+          "serverName": "discordapp.com",
           "fingerprint": "chrome",
           "show": false,
-          "publicKey": "sq7N8HmEL1cPskTNP4h5M31BqAoeIQ76bBcCDh9fKQc",
+          "publicKey": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
           "shortId": "",
-          "spiderX": "/"
+          "spiderX": ""
         },
         "grpcSettings": {
-          "serviceName": "",
-          "multiMode": false,
-          "idle_timeout": 60,
-          "health_check_timeout": 20,
-          "permit_without_stream": false,
-          "initial_windows_size": 0
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "tag": "private-3-mrar",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "joon.wtf-broo.ir",
-            "port": 20151,
-            "users": [
-              {
-                "id": "980377f4-fb43-4846-b66c-28805a5fef20",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "gstatic.com",
-          "fingerprint": "chrome",
-          "show": false,
-          "publicKey": "kyo7OJWco1ubhgk5C7sfMCP0o98iPo26kVP5K7S3UmM",
-          "shortId": "75dfb71a",
-          "spiderX": "/"
-        },
-        "grpcSettings": {
-          "serviceName": "",
-          "multiMode": false,
-          "idle_timeout": 60,
-          "health_check_timeout": 20,
-          "permit_without_stream": false,
-          "initial_windows_size": 0
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "tag": "private-4-mrar",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "joon.wtf-broo.ir",
-            "port": 42649,
-            "users": [
-              {
-                "id": "d2e30a09-5a3d-41d7-828f-9eb2e3501800",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp"
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "tag": "private-5-mrar",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "joon.wtf-broo.ir",
-            "port": 34288,
-            "users": [
-              {
-                "id": "fcaf6a32-19d4-4dca-a9cb-e2d15d5f1e28",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/",
-          "headers": {}
-        }
-      },
-      "mux": {
-        "enabled": false,
-        "concurrency": -1
-      }
-    },
-    {
-      "tag": "private-6-mrar",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "cljoon.wtf-broo.ir",
-            "port": 2083,
-            "users": [
-              {
-                "id": "1c057e72-8332-487b-aab5-cdbe7d311f58",
-                "alterId": 0,
-                "email": "t@t.tt",
-                "security": "auto",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "cljoon.wtf-broo.ir",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ],
-          "fingerprint": "chrome",
-          "show": false
-        },
-        "grpcSettings": {
-          "serviceName": "",
+          "serviceName": "xyz",
           "multiMode": false,
           "idle_timeout": 60,
           "health_check_timeout": 20,
