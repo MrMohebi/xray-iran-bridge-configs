@@ -88,15 +88,16 @@
       "settings": {
         "vnext": [
           {
-            "address": "38.180.20.221",
+            "address": "37.252.4.81",
             "port": 443,
             "users": [
               {
-                "id": "9824b5a8-1bbf-4b05-b54f-7e82535eae7d",
+                "id": "645079b3-00b2-4b32-e064-8fc0fc4d801c",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none"
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
@@ -109,9 +110,9 @@
           "serverName": "www.speedtest.net",
           "fingerprint": "safari",
           "show": false,
-          "publicKey": "c023GMsdvOYfRpHkWv6QFHbTG-ymhjfHbvjchr1xqDc",
-          "shortId": "335a",
-          "spiderX": ""
+          "publicKey": "-z7eI7oKsG6Pqeesntgr97QW5NbWgGZdYa14eyrEf2g",
+          "shortId": "c746",
+          "spiderX": "/"
         }
       },
       "mux": {
@@ -125,36 +126,31 @@
       "settings": {
         "vnext": [
           {
-            "address": "init1984-mtn.linuxmember.online",
-            "port": 2087,
+            "address": "172.232.56.227",
+            "port": 38332,
             "users": [
               {
-                "id": "4bdc331c-ff32-42ba-bd02-d279fb4851f1",
+                "id": "45cfccad-b4f8-42fc-80d3-b121f8e8ef8d",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
-                "encryption": "none"
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
               }
             ]
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "inittes.parsiran.top",
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ftp.debian.org",
           "fingerprint": "chrome",
-          "show": false
-        },
-        "grpcSettings": {
-          "serviceName": "@INIT1984",
-          "multiMode": false,
-          "idle_timeout": 60,
-          "health_check_timeout": 20,
-          "permit_without_stream": false,
-          "initial_windows_size": 0
+          "show": false,
+          "publicKey": "vue4lQ7FPo3js8cQuz9xEYfV6rftzE2Qa0lrwXxWYkU",
+          "shortId": "16e053a8",
+          "spiderX": "/"
         }
       },
       "mux": {
