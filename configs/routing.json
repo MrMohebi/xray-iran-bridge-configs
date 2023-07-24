@@ -9,17 +9,6 @@
           "public-1",
           "public-2"
         ]
-      },
-      {
-        "tag": "private-mrar-proxies",
-        "selector": [
-          "private-1-mrar",
-          "private-2-mrar",
-          "private-3-mrar",
-          "private-4-mrar",
-          "private-5-mrar",
-          "private-6-mrar"
-        ]
       }
     ],
     "rules":[
@@ -30,7 +19,7 @@
         "type":"field"
       },
       {
-        "inboundTag": ["socks-not-ir", "socks-just-bans", "private-socks-not-ir"],
+        "inboundTag": ["socks-not-ir", "socks-just-bans", "vless-not-ir"],
         "outboundTag": "direct-out",
         "domain": [
           "regexp:.*\\.ir$",
@@ -61,33 +50,13 @@
         "type":"field"
       },
       {
-        "inboundTag": ["private-socks-not-ir"],
-        "domain": [
-          "ext:iran-bans.dat:censored",
-          "ext:iran-bans.dat:sanctioned"
-        ],
-        "balancerTag":"private-mrar-proxies",
-        "type":"field"
-      },
-      {
-        "inboundTag": ["private-socks-not-ir"],
-        "ip": [
-          "149.154.160.0/21",
-          "149.154.168.0/22",
-          "149.154.172.0/22",
-          "185.76.151.0/24"
-        ],
-        "balancerTag":"private-mrar-proxies",
-        "type":"field"
-      },
-      {
         "inboundTag": ["socks-just-bans"],
         "domain": [],
         "outboundTag": "direct-out",
         "type":"field"
       },
       {
-        "inboundTag": ["socks-not-ir"],
+        "inboundTag": ["socks-not-ir", "vless-not-ir"],
         "domain": [],
         "balancerTag":"public-proxies",
         "type":"field"
