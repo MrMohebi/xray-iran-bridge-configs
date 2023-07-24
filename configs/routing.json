@@ -1,65 +1,154 @@
 {
-  "routing":{
-    "domainStrategy":"IPIfNonMatch",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
     "domainMatcher": "hybrid",
     "balancers": [
       {
         "tag": "public-proxies",
         "selector": [
-          "public-1",
-          "public-2"
+          "proxy_1137_Kiava-SW-U7vless://53d6cb51-395d-4db2-84ed-bd35ed833046@chaaaaanel.vpnprosec.shop:2087/?type=tcp\u0026security=reality\u0026pbk=xeZVtb0ug038nNaUOPcHQdU_SN7Z1nZZLPfnEM624xo\u0026fp=firefox\u0026sni=zula.ir\u0026sid=e2\u0026spx=%2F#VIP-VpnProSec",
+          "proxy_6069_Telegram+%28%40shopingv2ray%29",
+          "proxy_2836_Telegram+%28%40shopingv2ray%29",
+          "proxy_9897_SAT(@Outline_Vpn)",
+          "proxy_4699_SAT10(@Outline_Vpn)",
+          "proxy_1633_%F0%9F%87%BA%F0%9F%87%B8%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8664_%F0%9F%87%A9%F0%9F%87%AA%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_5486_%F0%9F%87%A8%F0%9F%87%A6%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_7353_%F0%9F%87%AC%F0%9F%87%A7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8235_SAT15(@Outline_Vpn)",
+          "proxy_8335_SAR17(@Outline_Vpn)",
+          "proxy_6589_SAT19(@Outline_Vpn)",
+          "proxy_4913_SAT21(@Outline_Vpn)",
+          "proxy_3125_Telegram+%28%40shopingv2ray%29",
+          "proxy_8762_%5B%F0%9F%8C%90%5DTelegram%3A+%40iran_ray",
+          "proxy_3754_%5B%F0%9F%8C%90%5DTelegram%3A+%40iran_ray",
+          "proxy_4187_Sasan_web",
+          "proxy_6814_%F0%9F%87%B3%F0%9F%87%B4%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_6007_%F0%9F%87%AC%F0%9F%87%A7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_5355_MCI600(@Outline_Vpn)vmess://eyJ2IjogIjIiLCAicHMiOiAiQEhvcGVfTmV0LWpvaW4tdXMtb24tVGVsZWdyYW0iLCAiYWRkIjogInYwMi5ndXRpbmd0aW5nLmNvbSIsICJwb3J0IjogIjMwMDAwIiwgInR5cGUiOiAibm9uZSIsICJpZCI6ICJmZmEwM2UxMS1mYThiLTRjYzMtOTQ0OC02OTI5ZTljODk0MWQiLCAiYWlkIjogIjAiLCAibmV0IjogIndzIiwgInBhdGgiOiAiL2FjZWFtZWR2IiwgImhvc3QiOiAiZ3ouZmFzdGNsb3VkLmNsdWIiLCAidGxzIjogIiJ9",
+          "proxy_3963_%40unlimiteddev-link2",
+          "proxy_9120_SUN3(@Outline_Vpn)",
+          "proxy_2038_SUN6(@Outline_Vpn)",
+          "proxy_6013_@unlimiteddev-link1",
+          "proxy_9448_@INIT1984-REALITY:S1",
+          "proxy_8028_@INIT1984-REALITY:S2",
+          "proxy_8826_@INIT1984-REALITY:S3",
+          "proxy_3684_@INIT1984-REALITY:S4vless://8c883de6-78e9-41e9-9d85-23774b945c16@f-off.melov2ray.store:446?type=tcp\u0026security=reality\u0026fp=chrome\u0026pbk=k-VQ6pgOfyN5EAfsdKrtE_bVjObglboUdTV_nFJbESc\u0026sni=www.speedtest.net\u0026flow=xtls-rprx-vision\u0026sid=3429df77\u0026spx=%2F#@melov2ray-reality-all",
+          "proxy_6650_Kiava-RLT-S1-U34",
+          "proxy_2839_Kiava-RLT-S2-U34",
+          "proxy_7171_MON(@Outline_Vpn)",
+          "proxy_6861_Kiava-RLT-S3-U34",
+          "proxy_2537_HamRahAvaL2-VpnProSec",
+          "proxy_5941_irancell1-VpnProSec",
+          "proxy_5508_irancell2-VpnProSec",
+          "proxy_3919_Kiava-RLT-S4-U34",
+          "proxy_7010_MON3(@Outline_Vpn)",
+          "proxy_7637_%40ServerNett+Mtn+Unlimited+1",
+          "proxy_9973_%40ServerNett+Mtn+Unlimited+2",
+          "proxy_3021_%F0%9F%87%A8%F0%9F%87%A6%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_6417_%F0%9F%87%AB%F0%9F%87%B7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_7264_%F0%9F%87%B8%F0%9F%87%AC%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_2992_%F0%9F%87%AF%F0%9F%87%B5%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8062_%F0%9F%87%AC%F0%9F%87%A7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8530_%F0%9F%87%A9%F0%9F%87%AA%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_9486_%F0%9F%87%BA%F0%9F%87%B8%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8331_%F0%9F%87%AB%F0%9F%87%B7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_6487_%F0%9F%87%AE%F0%9F%87%B8%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_8069_%F0%9F%87%AF%F0%9F%87%B5%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_5048_%F0%9F%87%AC%F0%9F%87%A7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_7357_%F0%9F%87%A9%F0%9F%87%AA%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_6884_%F0%9F%87%BA%F0%9F%87%B8%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_9760_%F0%9F%87%AB%F0%9F%87%B7%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_3159_%F0%9F%87%AE%F0%9F%87%B8%F0%9F%8C%8F+%40customv2ray+%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF+%D9%87%D8%A7%DB%8C+%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1+%D8%B9%D8%B6%D9%88+%D8%B4%D9%88",
+          "proxy_3194_-%F0%9F%87%A9%F0%9F%87%AA%7CAll",
+          "proxy_6480_STOR",
+          "proxy_8835_%40V2RayNgTE",
+          "proxy_2769_%40V2RayNgTE",
+          "proxy_1448_%40V2RayNgTE",
+          "proxy_5265_@melov2ray-reality-all",
+          "direct-out"
         ]
       }
     ],
-    "rules":[
+    "rules": [
       {
-        "inboundTag": ["socks-all"],
-        "domain": [],
-        "balancerTag":"public-proxies",
-        "type":"field"
+        "inboundTag": [
+          "socks-all"
+        ],
+        "balancerTag": "public-proxies",
+        "type": "field"
       },
       {
-        "inboundTag": ["socks-not-ir", "socks-just-bans", "vless-not-ir"],
-        "outboundTag": "direct-out",
+        "inboundTag": [
+          "socks-not-ir",
+          "socks-just-bans",
+          "vless-not-ir"
+        ],
         "domain": [
           "regexp:.*\\.ir$",
           "ext:iran.dat:ir",
           "ext:iran.dat:other",
-          "snapp", "digikala","tapsi", "blogfa", "bank", "sb24.com", "sheypoor.com", "tebyan.net", "beytoote.com", "telewebion.com", "Film2movie.ws", "Setare.com", "Filimo.com", "Torob.com", "Tgju.org", "Sarzamindownload.com", "downloadha.com", "P30download.com", "Sanjesh.org"
+          "snapp",
+          "digikala",
+          "tapsi",
+          "blogfa",
+          "bank",
+          "sb24.com",
+          "sheypoor.com",
+          "tebyan.net",
+          "beytoote.com",
+          "telewebion.com",
+          "Film2movie.ws",
+          "Setare.com",
+          "Filimo.com",
+          "Torob.com",
+          "Tgju.org",
+          "Sarzamindownload.com",
+          "downloadha.com",
+          "P30download.com",
+          "Sanjesh.org"
         ],
-        "type": "field"
+        "type": "field",
+        "outboundTag": "direct-out"
       },
       {
-        "inboundTag": ["socks-just-bans"],
+        "inboundTag": [
+          "socks-just-bans"
+        ],
         "domain": [
           "ext:iran-bans.dat:censored",
           "ext:iran-bans.dat:sanctioned"
         ],
-        "balancerTag":"public-proxies",
-        "type":"field"
+        "balancerTag": "public-proxies",
+        "type": "field"
       },
       {
-        "inboundTag": ["socks-just-bans"],
+        "inboundTag": [
+          "socks-just-bans"
+        ],
+        "balancerTag": "public-proxies",
+        "type": "field",
         "ip": [
           "149.154.160.0/21",
           "149.154.168.0/22",
           "149.154.172.0/22",
           "185.76.151.0/24"
+        ]
+      },
+      {
+        "inboundTag": [
+          "socks-just-bans"
         ],
-        "balancerTag":"public-proxies",
-        "type":"field"
+        "type": "field",
+        "outboundTag": "direct-out"
       },
       {
-        "inboundTag": ["socks-just-bans"],
-        "domain": [],
-        "outboundTag": "direct-out",
-        "type":"field"
-      },
-      {
-        "inboundTag": ["socks-not-ir", "vless-not-ir"],
-        "domain": [],
-        "balancerTag":"public-proxies",
-        "type":"field"
+        "inboundTag": [
+          "socks-not-ir",
+          "vless-not-ir"
+        ],
+        "balancerTag": "public-proxies",
+        "type": "field"
       }
     ]
   }
