@@ -46,7 +46,7 @@ jobs:
         with:
           command: |
             cd ${{env.DEPLOY_PATH}}
-            docker-compose --project-name v2ray-core up --build -d
+            docker-compose --project-name xray-core up --build -d
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY}}
