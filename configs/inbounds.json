@@ -3,7 +3,7 @@
     {
       "tag":"vless-not-ir",
       "listen":"0.0.0.0",
-      "port":7701,
+      "port":7700,
       "protocol": "vless",
       "settings": {
         "udp": false,
@@ -83,30 +83,6 @@
       "tag":"socks-not-ir",
       "listen":"0.0.0.0",
       "port":9902,
-      "protocol":"socks",
-      "settings":{
-        "auth":"password",
-        "accounts": [
-          {
-            "user": "mrm",
-            "pass": "123654789"
-          }
-        ],
-        "udp":true,
-        "userLevel":8
-      },
-      "sniffing":{
-        "destOverride":[
-          "http",
-          "tls"
-        ],
-        "enabled":true
-      }
-    },
-    {
-      "tag":"private-socks-not-ir",
-      "listen":"0.0.0.0",
-      "port":9802,
       "protocol":"socks",
       "settings":{
         "auth":"password",
