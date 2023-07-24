@@ -15,8 +15,9 @@ import (
 func main() {
 	configBases, configsStr := getFreshPublicProxies()
 
+	var outboundTags []string
 	for _, configBase := range configBases {
-		fmt.Println(configBase.Tag)
+		outboundTags = append(outboundTags, configBase.Tag)
 	}
 
 	outboundsFile, err := os.OpenFile("configs/outbounds.json", os.O_RDWR, 0644)
@@ -25,22 +26,33 @@ func main() {
 		log.Fatalf("failed opening outboundsFile: %s", err)
 	}
 
-	len, err := outboundsFile.WriteAt([]byte("{\"outbounds\":"+configsStr+"}"), 0)
+	_, err = outboundsFile.WriteAt([]byte("{\"outbounds\":"+configsStr+"}"), 0)
 	if err != nil {
 		log.Fatalf("failed writing to outboundsFile: %s", err)
 	}
-	println(len)
 
-	//routingFile := getRouting()
-	//
-	//for _, balancer := range routingFile.Routing.Balancers {
-	//	if balancer.Tag == "public-proxies" {
-	//		for _, selector := range balancer.Selector {
-	//			fmt.Println(selector)
-	//		}
-	//	}
-	//}
+	routing := getRouting()
 
+	for index, balancer := range routing.Routing.Balancers {
+		if balancer.Tag == "public-proxies" {
+			routing.Routing.Balancers[index].Selector = outboundTags
+		}
+	}
+
+	routingFile, err := os.OpenFile("configs/routing.json", os.O_RDWR, 0644)
+	defer routingFile.Close()
+	if err != nil {
+		log.Fatalf("failed writing to routingFile: %s", err)
+	}
+
+	routingStr, err := json.Marshal(routing)
+	if err != nil {
+		fmt.Println(err)
+	}
+	_, err = routingFile.WriteAt(routingStr, 0)
+	if err != nil {
+		log.Fatalf("failed writing to routingFile: %s", err)
+	}
 }
 
 func getRouting() RoutingFile {
@@ -70,7 +82,6 @@ func getFreshPublicProxies() ([]OutboundConfigBase, string) {
 	}
 	bodyStr := string(body)
 	bodyStr = "[" + strings.Trim(strings.Replace(bodyStr, "\n", ",", -1), ",") + "]"
-	fmt.Println(bodyStr)
 
 	var configs []OutboundConfigBase
 	err = json.Unmarshal([]byte(bodyStr), &configs)
