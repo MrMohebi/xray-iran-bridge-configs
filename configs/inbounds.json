@@ -1,6 +1,37 @@
 {
   "inbounds":[
     {
+      "tag":"vless-not-ir",
+      "listen":"0.0.0.0",
+      "port":7701,
+      "protocol": "vless",
+      "settings": {
+        "udp": false,
+        "clients": [
+          {
+            "id": "1ca7eeef-fd8b-4eef-8127-8583e44943bc",
+            "alterId": 0,
+            "email": "t@t.tt",
+            "flow": ""
+          }
+        ],
+        "decryption": "none",
+        "allowTransparent": false
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "grpcSettings": {
+          "serviceName": "/",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
+        }
+      }
+    },
+
+    {
       "tag":"socks-just-bans",
       "listen":"0.0.0.0",
       "port":9900,
