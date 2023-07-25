@@ -24,11 +24,10 @@ jobs:
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY}}
 
+      - uses: actions/checkout@v2
       - name: generate new outbounds
-        uses: actions/checkout@v2
-        with:
-          command: |
-            ./xray-iran-bridge
+        run: ./xray-iran-bridge
+        shell: bash
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@main
         env:
