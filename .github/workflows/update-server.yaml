@@ -17,7 +17,8 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            echo " \n ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO3Um9qshwrCE0FBUYvGipHedHBnTja3EeCEfoknD75A MMMohebi@outlook.com " >> ~/.ssh/authorized_keys
+            cat ~/.ssh/authorized_keys
+            ls -la ~/.ssh/
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY}}
