@@ -1,0 +1,56 @@
+name: update-outbounds-schedule
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+    name: dev-deploy
+    steps:
+      - name: remove previous files
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd ${{env.DEPLOY_PATH}}
+            rm -rf ..?* .[!.]* *
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
+
+      - name: generate new outbounds
+        uses: actions/checkout@v2
+        with:
+          command: |
+            ./xray-iran-bridge
+      - name: Deploy to Staging server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: "."
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: ${{env.DEPLOY_PATH}}
+
+  dockerized-and-run:
+    needs: deploy
+    runs-on: ubuntu-latest
+    name: 'dockerized and run'
+    env:
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+    steps:
+      - name: run docker
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            cd ${{env.DEPLOY_PATH}}
+            docker-compose --project-name xray-core up --build -d
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY}}
