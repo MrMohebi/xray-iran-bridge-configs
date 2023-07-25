@@ -62,7 +62,7 @@ func getRouting() RoutingFile {
 }
 
 func getFreshPublicProxies() ([]OutboundConfigBase, string) {
-	url := "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active.txt"
+	url := "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active_no_403_under_1000ms.txt"
 	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatalln(err)
