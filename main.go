@@ -24,6 +24,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed writing to outboundsFile: %s", err)
 	}
+	println("updated outbounds.json")
 
 	routing := getRouting()
 	for index, balancer := range routing.Routing.Balancers {
@@ -40,6 +41,8 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed writing to routingFile: %s", err)
 	}
+	println("updated routing.json")
+
 }
 
 func getRouting() RoutingFile {
@@ -59,7 +62,8 @@ func getRouting() RoutingFile {
 }
 
 func getFreshPublicProxies() ([]OutboundConfigBase, string) {
-	resp, err := http.Get("https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active.txt")
+	url := "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active.txt"
+	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -75,5 +79,6 @@ func getFreshPublicProxies() ([]OutboundConfigBase, string) {
 	if err != nil {
 		fmt.Println(err)
 	}
+	println("Got new proxies from => " + url)
 	return configs, bodyStr
 }
