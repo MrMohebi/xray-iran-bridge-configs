@@ -8,9 +8,9 @@ Uses GitHub Actions to update config and hosted xray-core.
 There are some pre-config routing rules
 
 - `bypass iranian websites`: It won't proxy iranian websites and just pass them from bridge iran server
-    ###### *Note: * Base on *.ir domains and provided list from [iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains)
+    ###### **Note:** Base on *.ir domains and provided list from [iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains)
 - `just bans`: It will only proxy censored and sanctioned websites
-    ###### *Note: * Base on [domain-list-iran-bans](https://github.com/MrMohebi/domain-list-iran-bans)
+    ###### **Note:** Base on [domain-list-iran-bans](https://github.com/MrMohebi/domain-list-iran-bans)
 - `proxy all`: I think no explanation is required.
 
 
