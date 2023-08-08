@@ -5,7 +5,9 @@ and update hosted xray-core as bridge.
 
 ### Run
 first run: `docker compose up -d --build`
+
 then: `docker exec -id xray-core /root/xray-core/xray-iran-bridge-updater`
+
 It will update it's self every 30 minutes. Change it [here](./docker-compose.yml#L26). 
 
 ### Routing rules
