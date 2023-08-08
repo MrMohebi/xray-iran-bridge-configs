@@ -12,9 +12,9 @@ It will update it's self every 30 minutes. Change it [here](./docker-compose.yml
 There are some pre-config routing rules
 
 - `bypass iranian websites`: It won't proxy iranian websites and just pass them from bridge iran server
-    ###### *Note: * Base on *.ir domains and provided list from [iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains)
+    ###### **Note:** Base on *.ir domains and provided list from [iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains)
 - `just bans`: It will only proxy censored and sanctioned websites
-    ###### *Note: * Base on [domain-list-iran-bans](https://github.com/MrMohebi/domain-list-iran-bans)
+    ###### **Note:** Base on [domain-list-iran-bans](https://github.com/MrMohebi/domain-list-iran-bans)
 - `proxy all`: I think no explanation is required.
 
 
