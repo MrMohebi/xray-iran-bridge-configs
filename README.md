@@ -2,7 +2,11 @@
 will generate `outbounds.json` base on provided proxies from [`proxies_active_no_403_under_1000ms.txt`](https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active_no_403_under_1000ms.txt) 
 and update hosted xray-core as bridge.
 
-Uses GitHub Actions to update config and hosted xray-core. 
+
+### Run
+Just execute: `docker compose up -d --build`
+
+It will update it's self every 30 minutes. Change it [here](./docker-compose.yml#L26). 
 
 ### Routing rules
 There are some pre-config routing rules

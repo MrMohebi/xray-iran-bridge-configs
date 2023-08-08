@@ -7,12 +7,14 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
 	"strings"
 )
 
 // nodemon --exec go run . --signal SIGTERM
 
 func main() {
+
 	configBases, configsStr := getFreshPublicProxies()
 
 	var outboundTags []string
@@ -43,6 +45,17 @@ func main() {
 	}
 	println("updated routing.json")
 
+	reloadXrayCore()
+
+}
+
+func reloadXrayCore() {
+	cmdRebootXray := exec.Command("/bin/sh", "/root/xray-core/rebootXray.sh")
+	err := cmdRebootXray.Start()
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Println("xray core Reloaded.")
 }
 
 func getRouting() RoutingFile {

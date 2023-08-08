@@ -1,12 +1,27 @@
 # ports: HOST:CONTAINER
 version: '3.8'
 services:
+  xray-ofelia:
+    image: mcuadros/ofelia:latest
+    container_name: xray-ofelia
+    command: daemon --docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      ofelia.job-local.ofelia.schedule: "@every 1h"
+      ofelia.job-local.ofelia.command: "date"
+
   xray:
     build: .
     container_name: xray-core
+    tty: true
     restart: unless-stopped
     ports:
       - "9900:9900"
       - "9901:9901"
       - "9902:9902"
       - "7700:7700"
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.xray-update.schedule: "@every 30m"
+      ofelia.job-exec.xray-update.command: '/root/xray-core/xray-iran-bridge-updater'
