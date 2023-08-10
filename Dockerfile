@@ -7,7 +7,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o xray-iran-bridge-
 
 
 FROM alpine:3.17
-RUN apk --no-cache add ca-certificates
+#RUN apk --no-cache add ca-certificates
 
 RUN wget https://github.com/XTLS/Xray-core/releases/download/v1.8.3/Xray-linux-64.zip
 RUN unzip Xray-linux-64.zip -d /root/xray-core
