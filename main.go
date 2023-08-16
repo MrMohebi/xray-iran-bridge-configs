@@ -14,8 +14,11 @@ import (
 // nodemon --exec go run . --signal SIGTERM
 
 func main() {
-
-	configBases, configsStr := getFreshPublicProxies()
+	var UrlProxies = "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active_no_403_under_1000ms.txt"
+	if len(os.Getenv("URL_PROXY_FILE")) > 3 {
+		UrlProxies = os.Getenv("URL_PROXY_FILE")
+	}
+	configBases, configsStr := getFreshPublicProxies(UrlProxies)
 
 	var outboundTags []string
 	for _, configBase := range configBases {
@@ -74,8 +77,7 @@ func getRouting() RoutingFile {
 	return routingFile
 }
 
-func getFreshPublicProxies() ([]OutboundConfigBase, string) {
-	url := "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active_no_403_under_1000ms.txt"
+func getFreshPublicProxies(url string) ([]OutboundConfigBase, string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		log.Fatalln(err)

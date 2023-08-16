@@ -15,6 +15,8 @@ services:
     build: .
     container_name: xray-core
     tty: true
+    environment:
+      - URL_PROXY_FILE=https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_for_ir_server_no403_u1s.txt
     restart: unless-stopped
     ports:
       - "9900:9900"
