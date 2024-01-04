@@ -14,7 +14,7 @@ import (
 // nodemon --exec go run . --signal SIGTERM
 
 func main() {
-	var UrlProxies = "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_active_no_403_under_1000ms.txt"
+	var UrlProxies = "https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/xray-json/actives_no_403_under_1000ms.txt"
 	if len(os.Getenv("URL_PROXY_FILE")) > 3 {
 		UrlProxies = os.Getenv("URL_PROXY_FILE")
 	}
