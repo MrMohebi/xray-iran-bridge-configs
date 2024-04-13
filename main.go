@@ -35,6 +35,7 @@ func main() {
 	for index, balancer := range routing.Routing.Balancers {
 		if balancer.Tag == "public-proxies" {
 			routing.Routing.Balancers[index].Selector = outboundTags
+			routing.BurstObservatory.SubjectSelector = outboundTags
 		}
 	}
 

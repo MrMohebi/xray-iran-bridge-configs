@@ -8,7 +8,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     labels:
-      ofelia.job-local.ofelia.schedule: "@every 1h"
+      ofelia.job-local.ofelia.schedule: "@every 4h"
       ofelia.job-local.ofelia.command: "date"
 
   xray:
