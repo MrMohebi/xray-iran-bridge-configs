@@ -1,0 +1,44 @@
+{
+  "outbounds": [
+    {
+      "tag": "node1",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "xray-node1",
+            "port": 1080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "node2",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "xray-node2",
+            "port": 1080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "node3",
+      "protocol": "socks",
+      "settings": {
+        "servers": [
+          {
+            "address": "xray-node3",
+            "port": 1080
+          }
+        ]
+      }
+    },
+    {
+      "tag": "direct-out",
+      "protocol": "freedom"
+    }
+  ]
+}

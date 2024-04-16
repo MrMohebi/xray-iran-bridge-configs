@@ -1,0 +1,22 @@
+{
+  "inbounds":[
+    {
+      "tag":"proxy",
+      "listen":"0.0.0.0",
+      "port":1080,
+      "protocol":"socks",
+      "settings":{
+        "auth":"noauth",
+        "udp":true,
+        "userLevel":8
+      },
+      "sniffing":{
+        "destOverride":[
+          "http",
+          "tls"
+        ],
+        "enabled":true
+      }
+    }
+  ]
+}

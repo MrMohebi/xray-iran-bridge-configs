@@ -4,9 +4,11 @@
     "domainMatcher": "hybrid",
     "balancers": [
       {
-        "tag": "public-proxies",
+        "tag": "slave-nodes",
         "selector": [
-          "proxy_6069_Telegram+%28%40shopingv2ray%29",
+          "node1",
+          "node2",
+          "node3",
           "direct-out"
         ],
         "strategy": {
@@ -17,9 +19,9 @@
     "rules": [
       {
         "inboundTag": [
-          "socks-all"
+          "socks-all",
         ],
-        "balancerTag": "public-proxies",
+        "balancerTag": "slave-nodes",
         "type": "field"
       },
       {
@@ -63,14 +65,14 @@
           "ext:iran-bans.dat:censored",
           "ext:iran-bans.dat:sanctioned"
         ],
-        "balancerTag": "public-proxies",
+        "balancerTag": "slave-nodes",
         "type": "field"
       },
       {
         "inboundTag": [
           "socks-just-bans"
         ],
-        "balancerTag": "public-proxies",
+        "balancerTag": "slave-nodes",
         "type": "field",
         "ip": [
           "149.154.160.0/21",
@@ -91,21 +93,23 @@
           "socks-not-ir",
           "vless-not-ir"
         ],
-        "balancerTag": "public-proxies",
+        "balancerTag": "slave-nodes",
         "type": "field"
       }
     ]
   },
   "burstObservatory": {
     "subjectSelector":[
-      "proxy-DMIT"
+      "node1",
+      "node2",
+      "node3"
     ],
     "pingConfig": {
       "destination": "http://www.google.com/gen_204",
-      "interval": "15m",
+      "interval": "5m",
       "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
-      "timeout": "5s",
-      "sampling": 2
+      "timeout": "3s",
+      "sampling": 5
     }
   }
 }
