@@ -19,7 +19,7 @@
     "rules": [
       {
         "inboundTag": [
-          "socks-all",
+          "socks-all"
         ],
         "balancerTag": "slave-nodes",
         "type": "field"
