@@ -2,7 +2,7 @@
 version: '3.8'
 services:
   xray-ofelia:
-    image: mcuadros/ofelia:latest
+    image: hub.hamdocker.ir/mcuadros/ofelia:latest
     container_name: xray-ofelia
     command: daemon --docker
     volumes:
@@ -11,19 +11,59 @@ services:
       ofelia.job-local.ofelia.schedule: "@every 4h"
       ofelia.job-local.ofelia.command: "date"
 
-  xray:
-    build: .
-    container_name: xray-core
-    tty: true
-#    environment:
-#      - URL_PROXY_FILE=https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/proxies_for_ir_server_no403_u1s.txt
+  xray-node1:
+    build:
+      context: ./
+      dockerfile: Dockerfile-xray-node
+    container_name: xray-node1
+    command: sh -c "/root/xray-core/xray-iran-bridge-updater && /root/xray-core/xray run -confdir /root/xray-core/configs"
+    environment:
+      - URL_PROXY_FILE=https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/xray-json/actives_no_403_under_1000ms.txt
+    restart: unless-stopped
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.xray-update.schedule: "@every 3h"
+      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+
+
+  xray-node2:
+    build:
+      context: ./
+      dockerfile: Dockerfile-xray-node
+    container_name: xray-node2
+    command: sh -c "sleep 600 && /root/xray-core/xray-iran-bridge-updater && /root/xray-core/xray run -confdir /root/xray-core/configs"
+    environment:
+      - URL_PROXY_FILE=https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/xray-json/actives_no_403_under_1000ms.txt
+    restart: unless-stopped
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.xray-update.schedule: "@every 4h"
+      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+
+
+  xray-node3:
+    build:
+      context: ./
+      dockerfile: Dockerfile-xray-node
+    container_name: xray-node3
+    command: sh -c "sleep 1200 && /root/xray-core/xray-iran-bridge-updater && /root/xray-core/xray run -confdir /root/xray-core/configs"
+    environment:
+      - URL_PROXY_FILE=https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/xray-json/actives_no_403_under_1000ms.txt
+    restart: unless-stopped
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.xray-update.schedule: "@every 5h"
+      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+
+  xray-master:
+    build:
+      context: ./
+      dockerfile: Dockerfile-xray-master
+    container_name: xray-master
+    command: sh -c "/root/xray-core/xray run -confdir /root/xray-core/configs"
     restart: unless-stopped
     ports:
       - "9900:9900"
       - "9901:9901"
       - "9902:9902"
       - "7700:7700"
-    labels:
-      ofelia.enabled: "true"
-      ofelia.job-exec.xray-update.schedule: "@every 30m"
-      ofelia.job-exec.xray-update.command: '/root/xray-core/xray-iran-bridge-updater'

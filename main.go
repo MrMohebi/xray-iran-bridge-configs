@@ -49,7 +49,7 @@ func main() {
 	}
 	println("updated routing.json")
 
-	reloadXrayCore()
+	//reloadXrayCore()
 
 }
 
