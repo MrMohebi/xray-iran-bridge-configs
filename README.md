@@ -1,14 +1,34 @@
 # Iran bridge Xray config generator
+###### **HA:** Multi node support
 will generate `outbounds.json` base on provided proxies from [`proxies_active_no_403_under_1000ms.txt`](https://raw.githubusercontent.com/MrMohebi/xray-proxy-grabber-telegram/master/collected-proxies/xray-json/actives_no_403_under_1000ms.txt) 
 and update hosted xray-core as bridge.
 
 
 ### Run
-first run: `docker compose up -d --build`
+```bash
+git clone https://github.com/MrMohebi/xray-iran-bridge-configs.git
+cd xray-iran-bridge-configs
+```
+then run:
+```bash
+docker compose up -d --build
+```
 
-then: `docker exec -id xray-core /root/xray-core/xray-iran-bridge-updater`
+### Connecting configs
 
-It will update it's self every 30 minutes. Change it [here](./docker-compose.yml#L26). 
+socks5 :
+> proxy all --> `socks5://myuser:123654789@SERVER_IP:9901`
+> 
+> not ir --> `socks5://myuser:123654789@SERVER_IP:9902`
+> 
+> proxy all --> `socks5://myuser:123654789@SERVER_IP:9900`
+
+vless:
+> not ir --> `vless://1ca7eeef-fd8b-4eef-8127-8583e44943bc@server_ip:7700?security=&type=tcp&encryption=none#my-proxy_not-ir`
+
+
+### configs:
+you can change the default passwords and usernames from [master inbounds file](configs-master/inbounds.json)
 
 ### Routing rules
 There are some pre-config routing rules

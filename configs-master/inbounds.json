@@ -34,7 +34,7 @@
         "auth":"password",
         "accounts": [
           {
-            "user": "mrm",
+            "user": "myuser",
             "pass": "123654789"
           }
         ],
@@ -58,7 +58,7 @@
         "auth":"password",
         "accounts": [
           {
-            "user": "mrm",
+            "user": "myuser",
             "pass": "123654789"
           }
         ],
@@ -82,7 +82,7 @@
         "auth":"password",
         "accounts": [
           {
-            "user": "mrm",
+            "user": "myuser",
             "pass": "123654789"
           }
         ],
