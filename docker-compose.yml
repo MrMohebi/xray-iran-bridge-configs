@@ -22,8 +22,8 @@ services:
     restart: unless-stopped
     labels:
       ofelia.enabled: "true"
-      ofelia.job-exec.xray-update.schedule: "@every 3h"
-      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+      ofelia.job-exec.xray-node1-update.schedule: "@every 3h"
+      ofelia.job-exec.xray-node1-update.command: '/root/xray-core/rebootXray.sh'
 
 
   xray-node2:
@@ -37,8 +37,8 @@ services:
     restart: unless-stopped
     labels:
       ofelia.enabled: "true"
-      ofelia.job-exec.xray-update.schedule: "@every 4h"
-      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+      ofelia.job-exec.xray-node2-update.schedule: "@every 4h"
+      ofelia.job-exec.xray-node2-update.command: '/root/xray-core/rebootXray.sh'
 
 
   xray-node3:
@@ -52,8 +52,8 @@ services:
     restart: unless-stopped
     labels:
       ofelia.enabled: "true"
-      ofelia.job-exec.xray-update.schedule: "@every 5h"
-      ofelia.job-exec.xray-update.command: '/root/xray-core/rebootXray.sh'
+      ofelia.job-exec.xray-node3-update.schedule: "@every 5h"
+      ofelia.job-exec.xray-node3-update.command: '/root/xray-core/rebootXray.sh'
 
   xray-master:
     build:
